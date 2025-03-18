@@ -21,7 +21,7 @@ class HomeViewBody extends StatelessWidget {
           const SizedBox(height: 45,),
           Text(
             'Best Seller',
-            style: Styles.titleMedium,
+            style: Styles.textStyle18,
           ),
           BestSellerListViewItem(),
         ],
