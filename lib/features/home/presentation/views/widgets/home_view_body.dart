@@ -20,7 +20,9 @@ class HomeViewBody extends StatelessWidget {
                 child: CustomAppBar(),
               ),
               FeaturedBooksListView(),
-              SizedBox(height: 45,),
+              SizedBox(
+                height: 45,
+              ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30.0),
                 child: Text(
@@ -28,11 +30,12 @@ class HomeViewBody extends StatelessWidget {
                   style: Styles.textStyle18,
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
             ],
           ),
         ),
-
         SliverFillRemaining(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 30.0),

@@ -3,7 +3,6 @@ import 'package:bookly/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-
 import 'sliding_text.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -13,7 +12,8 @@ class SplashViewBody extends StatefulWidget {
   State<SplashViewBody> createState() => _SplashViewBodyState();
 }
 
-class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProviderStateMixin{
+class _SplashViewBodyState extends State<SplashViewBody>
+    with SingleTickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<Offset> slidingAnimation;
 
@@ -24,7 +24,6 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
 
     navigateToHome(context);
   }
-
 
   @override
   void dispose() {
@@ -49,7 +48,6 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
   }
 
   void initSlidingAnimation() {
-
     animationController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 1),
@@ -65,12 +63,12 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
 void navigateToHome(context) {
   Future.delayed(
     const Duration(seconds: 2),
-        () {
+    () {
       // Get.to(() => const HomeView(),
       //     transition: Transition.fade,
       //     duration: kTranstionDuration);
 
-          GoRouter.of(context).push(AppRouter.kHomeView);
+      GoRouter.of(context).push(AppRouter.kHomeView);
     },
   );
 }

@@ -2,7 +2,6 @@ import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'similar_books_list_view.dart';
 
-
 class SimilarBooksSection extends StatelessWidget {
   const SimilarBooksSection({super.key});
 

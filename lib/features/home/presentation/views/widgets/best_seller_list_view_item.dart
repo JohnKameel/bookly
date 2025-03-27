@@ -5,7 +5,6 @@ import 'package:go_router/go_router.dart';
 import '../../../../../core/utils/assets.dart';
 import 'book_rating.dart';
 
-
 class BookListViewItem extends StatelessWidget {
   const BookListViewItem({super.key});
 
@@ -34,7 +33,9 @@ class BookListViewItem extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(width: 30,),
+            const SizedBox(
+              width: 30,
+            ),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,16 +49,16 @@ class BookListViewItem extends StatelessWidget {
                       style: Styles.textStyle20,
                     ),
                   ),
-      
-                  const SizedBox(height: 3,),
-      
+                  const SizedBox(
+                    height: 3,
+                  ),
                   const Text(
                     'J.K. Rowling',
                     style: Styles.textStyle14,
                   ),
-      
-                  const SizedBox(height: 3,),
-      
+                  const SizedBox(
+                    height: 3,
+                  ),
                   Row(
                     children: [
                       Text(
@@ -79,4 +80,3 @@ class BookListViewItem extends StatelessWidget {
     );
   }
 }
-
