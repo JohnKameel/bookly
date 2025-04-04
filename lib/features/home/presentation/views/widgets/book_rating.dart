@@ -3,39 +3,43 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 
-class BookRating extends StatelessWidget {
-  const BookRating(
-      {super.key, this.mainAxisAlignment = MainAxisAlignment.start});
+class PageCount extends StatelessWidget {
+  const PageCount({
+    super.key,
+    this.mainAxisAlignment = MainAxisAlignment.start,
+    required this.pageCount,
+  });
 
   final MainAxisAlignment mainAxisAlignment;
+  final int pageCount;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: mainAxisAlignment,
-      children: const [
-        Icon(
-          FontAwesomeIcons.solidStar,
-          size: 14,
-          color: Color(0xffFFDD4F),
+      children: [
+        const Icon(
+          FontAwesomeIcons.book,
+          size: 18,
+          color: Colors.white,
         ),
-        SizedBox(
+        const SizedBox(
           width: 6.3,
         ),
         Text(
-          '4.8',
+          pageCount.toString(),
           style: Styles.textStyle16,
         ),
-        SizedBox(
-          width: 5,
-        ),
-        Opacity(
-          opacity: 0.5,
-          child: Text(
-            '(245)',
-            style: Styles.textStyle14
-          ),
-        ),
+        // SizedBox(
+        //   width: 5,
+        // ),
+        // Opacity(
+        //   opacity: 0.5,
+        //   child: Text(
+        //     '(245)',
+        //     style: Styles.textStyle14
+        //   ),
+        // ),
       ],
     );
   }
